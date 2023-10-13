@@ -1,26 +1,24 @@
 // Import necessary styles and components
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import styles for toast notifications
-import MovieDetails from './pages/MovieDetails';
+// import "./App.scss";
+import { NavBar } from "./components/NavBar";
+import { Banner } from "./components/Banner";
+import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
+import { Contact } from "./components/Contact";
+import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Define the main App component
 function App() {
   return (
     <div className="App">
-      {/* Set up React Router for navigation */}
-      <Router>
-        <Routes>
-          {/* Define a route for the HomePage component */}
-          <Route path="/" element={<HomePage />} />
-          {/* Define a route for the MovieDetails component */}
-          <Route path="/movies/:id" element={<MovieDetails />} />
-        </Routes>
-      </Router>
-      {/* Add a ToastContainer for displaying toast notifications */}
-      <ToastContainer />
+    <NavBar />
+      <Banner />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
